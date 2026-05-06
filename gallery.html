@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="黄宇翔的个人作品集网站">
+  <meta name="author" content="黄宇翔">
+  <title>画廊 | 黄宇翔作品集</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="logo">黄宇翔 · Portfolio</div>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="">首页</a></li>
+      <li><a href="resume.html" class="">简历</a></li>
+      <li><a href="gallery.html" class="active">画廊</a></li>
+      <li><a href="contact.html" class="">联系</a></li>
+      <li><button id="themeToggle" aria-label="切换暗黑模式">🌙</button></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="page-title"><h1>项目画廊</h1></section>
+  <section class="gallery-grid">
+    <figure class="gallery-item"><img src="images/p1.svg" alt="项目1"><figcaption>校园二手平台</figcaption></figure>
+    <figure class="gallery-item"><img src="images/p2.svg" alt="项目2"><figcaption>个人博客</figcaption></figure>
+    <figure class="gallery-item"><img src="images/p3.svg" alt="项目3"><figcaption>天气应用</figcaption></figure>
+    <figure class="gallery-item"><img src="images/p4.svg" alt="项目4"><figcaption>待办列表</figcaption></figure>
+    <figure class="gallery-item"><img src="images/p5.svg" alt="项目5"><figcaption>音乐播放器</figcaption></figure>
+    <figure class="gallery-item"><img src="images/p6.svg" alt="项目6"><figcaption>计算器</figcaption></figure>
+  </section>
+  <div id="modal" class="modal" aria-hidden="true">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <img class="modal-content" id="modalImg" alt="">
+    <div id="modalCaption"></div>
+  </div>
+</main>
+<footer><p>&copy; 2026 黄宇翔. 使用 HTML + CSS + JavaScript 制作.</p></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

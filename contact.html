@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="黄宇翔的个人作品集网站">
+  <meta name="author" content="黄宇翔">
+  <title>联系 | 黄宇翔作品集</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="logo">黄宇翔 · Portfolio</div>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="">首页</a></li>
+      <li><a href="resume.html" class="">简历</a></li>
+      <li><a href="gallery.html" class="">画廊</a></li>
+      <li><a href="contact.html" class="active">联系</a></li>
+      <li><button id="themeToggle" aria-label="切换暗黑模式">🌙</button></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="page-title"><h1>联系我</h1></section>
+  <section class="contact-wrap">
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="form-group">
+        <label for="name">姓名</label>
+        <input type="text" id="name" name="name">
+        <small class="error" id="errName"></small>
+      </div>
+      <div class="form-group">
+        <label for="email">邮箱</label>
+        <input type="text" id="email" name="email">
+        <small class="error" id="errEmail"></small>
+      </div>
+      <div class="form-group">
+        <label for="message">消息（至少 10 个字符）</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+        <small class="error" id="errMsg"></small>
+      </div>
+      <button type="submit" class="btn">发送</button>
+      <p id="formSuccess" class="success"></p>
+    </form>
+  </section>
+</main>
+<footer><p>&copy; 2026 黄宇翔. 使用 HTML + CSS + JavaScript 制作.</p></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

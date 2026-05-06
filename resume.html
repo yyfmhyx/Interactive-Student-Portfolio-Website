@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="黄宇翔的个人作品集网站">
+  <meta name="author" content="黄宇翔">
+  <title>简历 | 黄宇翔作品集</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="logo">黄宇翔 · Portfolio</div>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="">首页</a></li>
+      <li><a href="resume.html" class="active">简历</a></li>
+      <li><a href="gallery.html" class="">画廊</a></li>
+      <li><a href="contact.html" class="">联系</a></li>
+      <li><button id="themeToggle" aria-label="切换暗黑模式">🌙</button></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="page-title"><h1>个人简历</h1></section>
+  <section>
+    <h2>学历</h2>
+    <article class="card">
+      <h3>XX 大学 · 计算机科学与技术</h3>
+      <p>2022.09 — 至今 · 本科在读</p>
+    </article>
+  </section>
+  <section>
+    <h2>技术栈</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="frontend">前端</button>
+      <button class="filter-btn" data-filter="backend">后端</button>
+      <button class="filter-btn" data-filter="other">其他</button>
+    </div>
+    <div class="skills">
+      <div class="skill" data-category="frontend">HTML5</div>
+      <div class="skill" data-category="frontend">CSS3</div>
+      <div class="skill" data-category="frontend">JavaScript</div>
+      <div class="skill" data-category="frontend">Bootstrap</div>
+      <div class="skill" data-category="backend">Node.js</div>
+      <div class="skill" data-category="backend">Python</div>
+      <div class="skill" data-category="backend">MySQL</div>
+      <div class="skill" data-category="other">Git</div>
+      <div class="skill" data-category="other">Figma</div>
+      <div class="skill" data-category="other">Linux</div>
+    </div>
+  </section>
+  <section>
+    <h2>项目经验</h2>
+    <article class="card">
+      <h3>校园二手交易平台</h3>
+      <p>2025.03 — 2025.06 · 负责前端页面开发，使用原生 JS 实现搜索筛选功能。</p>
+    </article>
+    <article class="card">
+      <h3>个人博客系统</h3>
+      <p>2024.10 — 2024.12 · 基于 Node.js + Express 搭建后端，前端使用 Bootstrap。</p>
+    </article>
+  </section>
+</main>
+<footer><p>&copy; 2026 黄宇翔. 使用 HTML + CSS + JavaScript 制作.</p></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
