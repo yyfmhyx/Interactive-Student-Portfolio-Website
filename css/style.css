@@ -329,6 +329,76 @@ section h2 {
   text-align: center;
 }
 
+/* ===== 历史联系我 (Contact History) ===== */
+.history-section {
+  max-width: 500px;
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.history-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.history-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.5rem;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.history-item .h-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.history-item .h-email {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0.2rem 0;
+}
+
+.history-item .h-message {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-style: italic;
+}
+
+.history-item .h-date {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 0.3rem;
+}
+
+.no-history {
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+}
+
+.btn-clear {
+  margin-top: 1rem;
+  background: #e74c3c;
+}
+
+.btn-clear:hover {
+  background: #c0392b;
+}
+
 /* ===== 8. 底部与全局动画 (Footer & Animations) ===== */
 footer {
   text-align: center;

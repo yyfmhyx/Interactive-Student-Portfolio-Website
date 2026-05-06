@@ -59,6 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ====== 联系表单验证 ====== */
   const form = document.getElementById('contactForm');
   if (form){
+    // 加载历史记录
+    renderHistory();
+
     form.addEventListener('submit', e => {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
@@ -75,8 +78,63 @@ document.addEventListener('DOMContentLoaded', () => {
       if (msg.length < 10){ errMsg.textContent = '消息至少 10 个字符'; ok = false; }
       if (ok){
         success.textContent = '✓ 消息已发送！感谢您的联系。';
+        
+        // 保存到历史记录
+        saveToHistory({ name, email, message: msg });
+        renderHistory();
+        
         form.reset();
       }
+    });
+  }
+
+  /* ====== 历史联系我功能 ====== */
+  const HISTORY_KEY = 'contactHistory';
+
+  function saveToHistory(record) {
+    const history = getHistory();
+    record.date = new Date().toLocaleString('zh-CN');
+    history.unshift(record);
+    // 只保留最近 10 条
+    if (history.length > 10) history.pop();
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+  }
+
+  function getHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(HISTORY_KEY)) || [];
+    } catch {
+      return [];
+    }
+  }
+
+  function renderHistory() {
+    const listEl = document.getElementById('historyList');
+    if (!listEl) return;
+    
+    const history = getHistory();
+    
+    if (history.length === 0) {
+      listEl.innerHTML = '<p class="no-history">暂无历史记录</p>';
+      return;
+    }
+    
+    listEl.innerHTML = history.map(item => `
+      <div class="history-item">
+        <div class="h-name">${item.name}</div>
+        <div class="h-email">${item.email}</div>
+        <div class="h-message">${item.message}</div>
+        <div class="h-date">${item.date}</div>
+      </div>
+    `).join('');
+  }
+
+  // 清空历史按钮
+  const clearBtn = document.getElementById('clearHistory');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      localStorage.removeItem(HISTORY_KEY);
+      renderHistory();
     });
   }
 });
